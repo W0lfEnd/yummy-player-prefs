@@ -1,6 +1,12 @@
 Changelog
 =========
 
+[1.0.4] - 2026-07-27
+--------------------
+* **Removed**
+    * Test PlayerPrefs data generation editor utility.
+    * DeferredPlayerPrefsSaver runtime helper.
+
 [1.0.3] - 2026-07-27
 --------------------
 * **Fixed**
@@ -24,4 +30,3 @@ Changelog
     * Runtime UI Toolkit debug panel for inspecting PlayerPrefs in builds.
     * Platform-aware runtime fetchers for Editor, Windows, macOS, Linux, Android, and iOS.
     * PlayerPrefsProviderBase for strongly typed PlayerPrefs-backed settings classes.
-    * DeferredPlayerPrefsSaver for delayed PlayerPrefs.Save() flushing.

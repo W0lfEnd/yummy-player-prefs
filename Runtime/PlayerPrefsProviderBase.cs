@@ -19,8 +19,6 @@ namespace YummyDev.PlayerPrefsTool
         protected const string ValueSuffix = "Value";
         protected const string TypeSuffix = "Type";
 
-        public DeferredPlayerPrefsSaver DeferredPlayerPrefsSaver { get; set; }
-
         public int LaunchCount
         {
             get
@@ -167,11 +165,7 @@ namespace YummyDev.PlayerPrefsTool
                 SetDateTime(propertyName, (DateTime) value);
             }
 
-            if (DeferredPlayerPrefsSaver)
-                DeferredPlayerPrefsSaver.MarkDirty();
-            else
-                PlayerPrefs.Save();
-
+            PlayerPrefs.Save();
         }
 
         protected virtual object GetValueOrDefault(string propertyName, object defaultValue)

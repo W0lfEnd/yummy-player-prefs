@@ -12,7 +12,6 @@ Yummy Player Prefs is a Unity package for inspecting and editing `PlayerPrefs` w
 - Export and import PlayerPrefs as JSON, including selected groups.
 - Runtime UI Toolkit panel for debug builds and device testing.
 - Platform-aware PlayerPrefs fetchers for Editor, Windows, macOS, Linux, Android, and iOS.
-- `DeferredPlayerPrefsSaver` for batching `PlayerPrefs.Save()` calls.
 - `PlayerPrefsProviderBase` for strongly typed PlayerPrefs-backed settings classes.
 
 ## Installation
@@ -20,7 +19,7 @@ Yummy Player Prefs is a Unity package for inspecting and editing `PlayerPrefs` w
 Install from Unity Package Manager with this Git URL:
 
 ```text
-https://github.com/W0lfEnd/yummy-player-prefs.git#v1.0.3
+https://github.com/W0lfEnd/yummy-player-prefs.git#v1.0.4
 ```
 
 Or add it directly to `Packages/manifest.json`:
@@ -28,7 +27,7 @@ Or add it directly to `Packages/manifest.json`:
 ```json
 {
   "dependencies": {
-    "com.yummydev.player-prefs": "https://github.com/W0lfEnd/yummy-player-prefs.git#v1.0.3"
+    "com.yummydev.player-prefs": "https://github.com/W0lfEnd/yummy-player-prefs.git#v1.0.4"
   }
 }
 ```
@@ -41,12 +40,6 @@ Open the editor window from:
 
 ```text
 Tools > Yummy Player Prefs > Editor
-```
-
-Generate test data from:
-
-```text
-Tools > Yummy Player Prefs > Test Data > Generate 1 000 entries
 ```
 
 To create a runtime debug panel:
@@ -80,6 +73,5 @@ Use the runtime panel only in development, QA, or debug builds unless your produ
 - Display name: `Yummy Player Prefs`
 - Namespace: `YummyDev.PlayerPrefsTool`
 - Runtime assembly: `Yummy.PlayerPrefs`
-- Editor assembly: `Yummy.PlayerPrefs.Editor`
 - Unity version: `2021.3` or newer
 - License: MIT
