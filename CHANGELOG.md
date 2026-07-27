@@ -1,6 +1,11 @@
 Changelog
 =========
 
+[1.0.2] - 2026-07-27
+--------------------
+* **Fixed**
+    * Regenerate the editor PlayerPrefs folder GUID to avoid conflicts with options-provider.
+
 [1.0.1] - 2026-07-27
 --------------------
 * **Fixed**
