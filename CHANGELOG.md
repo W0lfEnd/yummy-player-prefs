@@ -1,6 +1,11 @@
 Changelog
 =========
 
+[1.0.1] - 2026-07-27
+--------------------
+* **Fixed**
+    * Compile the editor window wrapper in the same assembly as the shared PlayerPrefs editor view.
+
 [1.0.0] - 2026-07-27
 --------------------
 * **Added**

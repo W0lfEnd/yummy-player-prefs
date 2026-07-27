@@ -20,7 +20,7 @@ Yummy Player Prefs is a Unity package for inspecting and editing `PlayerPrefs` w
 Install from Unity Package Manager with this Git URL:
 
 ```text
-https://github.com/W0lfEnd/yummy-player-prefs.git#v1.0.0
+https://github.com/W0lfEnd/yummy-player-prefs.git#v1.0.1
 ```
 
 Or add it directly to `Packages/manifest.json`:
@@ -28,7 +28,7 @@ Or add it directly to `Packages/manifest.json`:
 ```json
 {
   "dependencies": {
-    "com.yummydev.player-prefs": "https://github.com/W0lfEnd/yummy-player-prefs.git#v1.0.0"
+    "com.yummydev.player-prefs": "https://github.com/W0lfEnd/yummy-player-prefs.git#v1.0.1"
   }
 }
 ```

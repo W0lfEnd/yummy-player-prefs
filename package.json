@@ -1,6 +1,6 @@
 {
   "name": "com.yummydev.player-prefs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Yummy Player Prefs",
   "description": "Unity editor and runtime tools for browsing, editing, exporting, importing, and snapshotting PlayerPrefs.",
   "unity": "2021.3",
