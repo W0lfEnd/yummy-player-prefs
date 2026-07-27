@@ -1,6 +1,11 @@
 Changelog
 =========
 
+[1.0.5] - 2026-07-27
+--------------------
+* **Fixed**
+    * Avoid repeated UI Toolkit visual tree mutations during editor window repaint.
+
 [1.0.4] - 2026-07-27
 --------------------
 * **Removed**

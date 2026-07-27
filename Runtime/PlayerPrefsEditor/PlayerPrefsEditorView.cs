@@ -666,12 +666,6 @@ namespace YummyDev.PlayerPrefsTool
                 classMatches &&
                 narrowClassMatches)
             {
-                ApplyAdaptiveToolbarLayout();
-                ApplyAdaptiveTabsLayout();
-                ApplyAdaptiveFilterLayout();
-                ApplyAdaptiveRootOrder();
-                ApplyAdaptiveMainOnlyVisibility();
-                ApplyAdaptiveRowHeights();
                 return;
             }
 
@@ -3149,6 +3143,9 @@ namespace YummyDev.PlayerPrefsTool
         private static void ClearFilterCellWidth(VisualElement filterCell)
         {
             if (filterCell == null) return;
+            if (filterCell.style.width.keyword == StyleKeyword.Auto)
+                return;
+
             filterCell.style.width = StyleKeyword.Auto;
         }
 
@@ -3157,7 +3154,15 @@ namespace YummyDev.PlayerPrefsTool
             if (filterCell == null || colHeader == null) return;
             float w = colHeader.layout.width;
             if (w > 0)
+            {
+                if (filterCell.resolvedStyle.width > 0f &&
+                    Mathf.Approximately(filterCell.resolvedStyle.width, w))
+                {
+                    return;
+                }
+
                 filterCell.style.width = w;
+            }
         }
 
         // =====================================================================
