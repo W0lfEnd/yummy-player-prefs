@@ -1,0 +1,23 @@
+{
+  "name": "com.yummydev.player-prefs",
+  "version": "1.0.0",
+  "displayName": "Yummy Player Prefs",
+  "description": "Unity editor and runtime tools for browsing, editing, exporting, importing, and snapshotting PlayerPrefs.",
+  "unity": "2021.3",
+  "license": "MIT",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.1"
+  },
+  "keywords": [
+    "playerprefs",
+    "editor",
+    "debug",
+    "tools",
+    "save"
+  ],
+  "author": {
+    "name": "W0lfEnd",
+    "url": "https://github.com/W0lfEnd"
+  },
+  "samples": []
+}  

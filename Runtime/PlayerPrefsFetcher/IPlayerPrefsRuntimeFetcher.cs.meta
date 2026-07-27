@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 863061ab080ec4d45be3d9e0eb37b156
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 304550
+  packageName: PlayerPrefs Runtime Tool - Viewer and Editor
+  packageVersion: 3.0
+  assetPath: Assets/DmytroUdovychenko/PlayerPrefsRuntimeTool/Scripts/PlayerPrefsFetcher/IPlayerPrefsRuntimeFetcher.cs
+  uploadId: 843072

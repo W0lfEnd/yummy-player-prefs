@@ -1,0 +1,1505 @@
+/* ============================================================
+   PlayerPrefsEditor.uss  –  UIToolkit styles
+   ============================================================ */
+
+/* ─── Utility ─────────────────────────────────────────────── */
+/* Toggle via EnableInClassList instead of style.display in C# */
+.ppe-hidden { display: none; }
+
+/* ─── Root ────────────────────────────────────────────────── */
+.ppe-root {
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: rgb(30, 30, 30);
+    color: rgb(220, 220, 220);
+}
+
+.ppe-root Label,
+.ppe-root Button,
+.ppe-root Toggle,
+.ppe-root TextField,
+.ppe-root DropdownField,
+.ppe-root EnumField {
+    color: rgb(220, 220, 220);
+}
+
+.ppe-root .unity-label,
+.ppe-root .unity-button,
+.ppe-root .unity-toggle__label,
+.ppe-root .unity-base-field__label,
+.ppe-root .unity-base-field__input,
+.ppe-root .unity-base-text-field__input,
+.ppe-root .unity-text-field__input,
+.ppe-root .unity-dropdown-field__input,
+.ppe-root .unity-enum-field__input {
+    color: rgb(220, 220, 220);
+}
+
+.ppe-root .unity-base-field__input,
+.ppe-root .unity-base-text-field__input,
+.ppe-root .unity-text-field__input,
+.ppe-root .unity-dropdown-field__input,
+.ppe-root .unity-enum-field__input {
+    background-color: rgb(38, 38, 38);
+    border-color: rgba(170, 170, 170, 0.35);
+}
+
+.ppe-root .unity-base-text-field__input:focus,
+.ppe-root .unity-text-field__input:focus,
+.ppe-root .unity-dropdown-field__input:focus,
+.ppe-root .unity-enum-field__input:focus {
+    background-color: rgb(44, 48, 56);
+    border-color: rgba(90, 150, 255, 0.75);
+}
+
+/* ─── Toolbar ─────────────────────────────────────────────── */
+.ppe-toolbar {
+    flex-direction: row;
+    align-items: center;
+    min-height: 24px;
+    background-color: rgb(42, 42, 42);
+}
+
+.ppe-toolbar-btn {
+    font-size: 12px;
+    padding: 0 8px;
+    background-color: rgb(58, 58, 58);
+    border-color: rgba(170, 170, 170, 0.32);
+    color: rgb(226, 226, 226);
+}
+
+.ppe-toolbar-btn .unity-label,
+.ppe-toolbar-btn .unity-button__text {
+    color: rgb(226, 226, 226);
+}
+
+.ppe-toolbar-btn:hover {
+    background-color: rgb(68, 68, 68);
+    border-color: rgba(190, 190, 190, 0.45);
+}
+
+.ppe-toolbar-btn--entry {
+    background-color: rgb(52, 63, 52);
+    border-color: rgba(115, 180, 115, 0.42);
+}
+
+.ppe-toolbar-btn--entry:hover {
+    background-color: rgb(60, 74, 60);
+    border-color: rgba(145, 205, 145, 0.52);
+}
+
+.ppe-toolbar-btn--group {
+    background-color: rgb(57, 57, 68);
+    border-color: rgba(155, 155, 215, 0.40);
+}
+
+.ppe-toolbar-btn--group:hover {
+    background-color: rgb(66, 66, 80);
+    border-color: rgba(180, 180, 235, 0.50);
+}
+
+.ppe-toolbar-btn--selection {
+    background-color: rgb(50, 58, 70);
+    border-color: rgba(115, 155, 220, 0.38);
+}
+
+.ppe-toolbar-btn--selection:hover {
+    background-color: rgb(58, 68, 84);
+    border-color: rgba(145, 180, 240, 0.50);
+}
+
+.ppe-toolbar-btn--danger {
+    background-color: rgb(68, 50, 50);
+    border-color: rgba(215, 95, 95, 0.42);
+}
+
+.ppe-toolbar-btn--danger:hover {
+    background-color: rgb(78, 56, 56);
+    border-color: rgba(235, 115, 115, 0.55);
+}
+
+.ppe-toolbar-btn--data {
+    background-color: rgb(58, 55, 70);
+    border-color: rgba(170, 145, 220, 0.38);
+}
+
+.ppe-toolbar-btn--data:hover {
+    background-color: rgb(68, 64, 84);
+    border-color: rgba(195, 170, 240, 0.50);
+}
+
+.ppe-toolbar-btn--io {
+    background-color: rgb(50, 62, 66);
+    border-color: rgba(110, 185, 205, 0.38);
+}
+
+.ppe-toolbar-btn--io:hover {
+    background-color: rgb(58, 74, 78);
+    border-color: rgba(140, 210, 230, 0.50);
+}
+
+.ppe-danger-btn {
+    color: rgb(220, 70, 70);
+    -unity-font-style: bold;
+}
+
+.ppe-danger-btn:hover {
+    background-color: rgba(200, 50, 50, 0.25);
+    border-color: rgba(200, 50, 50, 0.55);
+}
+
+.ppe-selected-count {
+    min-width: 82px;
+    padding: 0 8px;
+    -unity-text-align: middle-left;
+    font-size: 11px;
+    color: rgba(210, 210, 210, 0.85);
+}
+
+.ppe-status-row {
+    flex-direction: row;
+    align-items: stretch;
+    flex-shrink: 0;
+}
+
+.ppe-status-row .ppe-status {
+    flex-grow: 1;
+}
+
+.ppe-mobile-quick-actions {
+    display: none;
+}
+
+.ppe-mobile-new-entry {
+    display: none;
+}
+
+.ppe-toolbar-spacer {
+    flex-grow: 1;
+}
+
+.ppe-toolbar-fold-toggle {
+    display: none;
+}
+
+/* ─── Tabs ────────────────────────────────────────────────── */
+.ppe-tabs-scroll {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+    background-color: rgb(36, 36, 36);
+}
+
+.ppe-tabs {
+    flex-direction: row;
+    align-items: center;
+    min-height: 24px;
+    border-bottom-width: 1px;
+    border-color: rgba(0, 0, 0, 0.45);
+    background-color: rgb(36, 36, 36);
+}
+
+.ppe-tab {
+    min-width: 86px;
+    padding: 0 10px;
+    -unity-text-align: middle-center;
+    background-color: rgb(54, 54, 54);
+    border-color: rgba(170, 170, 170, 0.30);
+    color: rgb(220, 220, 220);
+}
+
+.ppe-tab .unity-toggle__label {
+    color: rgb(220, 220, 220);
+}
+
+.ppe-tab .unity-toggle__input,
+.ppe-tab .unity-toggle__checkmark {
+    display: none;
+    width: 0;
+    min-width: 0;
+    margin: 0;
+}
+
+.ppe-tab-with-close {
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.ppe-tab-with-close .ppe-tab {
+    min-width: 70px;
+    padding-right: 4px;
+}
+
+.ppe-tab-close-btn {
+    width: 18px;
+    min-width: 18px;
+    padding: 0;
+    margin-left: -2px;
+    -unity-text-align: middle-center;
+    background-color: rgb(54, 54, 54);
+    border-color: rgba(170, 170, 170, 0.30);
+    color: rgb(220, 220, 220);
+}
+
+.ppe-tab--active {
+    background-color: rgb(45, 78, 128);
+    color: rgb(245, 245, 245);
+    -unity-font-style: bold;
+}
+
+.ppe-tab--active .unity-toggle__label {
+    color: rgb(245, 245, 245);
+}
+
+.ppe-group-name-field {
+    width: 132px;
+    margin-right: 2px;
+}
+
+.ppe-group-name-field > .unity-base-field__label {
+    display: none;
+}
+
+/* ─── Per-column Filter Row ───────────────────────────────── */
+/*
+   Initial widths mirror MultiColumnListView default column widths.
+   C# (SetupFilterSync) updates them dynamically when columns are resized.
+*/
+.ppe-filter-row {
+    flex-direction: row;
+    align-items: stretch;
+    background-color: rgb(34, 34, 34);
+    border-bottom-width: 1px;
+    border-color: rgba(0, 0, 0, 0.45);
+}
+
+.ppe-filter-cell {
+    flex-direction: row;
+    align-items: center;
+    padding: 2px 3px;
+    border-right-width: 1px;
+    border-color: rgba(0, 0, 0, 0.35);
+}
+
+/* Initial widths – overridden at runtime to match actual column widths */
+.ppe-filter-col-select   { width: 28px; flex-shrink: 0; }
+.ppe-filter-col-favorite { width: 28px; flex-shrink: 0; }
+.ppe-filter-col-key     { width: 200px; flex-shrink: 0; }
+.ppe-filter-col-type    { width: 80px;  flex-shrink: 0; }
+.ppe-filter-col-value   { flex-grow: 1; min-width: 60px; }
+.ppe-filter-col-edit    { width: 28px;  flex-shrink: 0; }
+.ppe-filter-col-action  { width: 28px;  flex-shrink: 0; }
+
+.ppe-filter-field {
+    flex-grow: 1;
+    margin: 0;
+    min-width: 0;
+}
+
+.ppe-filter-field > .unity-base-field__label {
+    display: none;
+}
+
+.ppe-filter-field .unity-base-text-field__input,
+.ppe-filter-field .unity-dropdown-field__input {
+    border-radius: 2px;
+    padding: 1px 4px;
+    font-size: 11px;
+}
+
+/* ─── Status Bar ──────────────────────────────────────────── */
+.ppe-status {
+    padding: 2px 6px;
+    font-size: 11px;
+    border-bottom-width: 1px;
+    border-color: rgba(0, 0, 0, 0.45);
+    background-color: rgb(34, 34, 34);
+    color: rgb(205, 205, 205);
+    white-space: nowrap;
+    overflow: hidden;
+    -unity-text-overflow-position: end;
+    text-overflow: ellipsis;
+}
+
+/* ─── Error Banner (duplicate keys) ──────────────────────── */
+.ppe-error-banner {
+    padding: 5px 10px;
+    background-color: rgba(210, 90, 0, 0.14);
+    border-bottom-width: 1px;
+    border-color: rgba(210, 90, 0, 0.55);
+    color: rgb(200, 80, 0);
+    -unity-font-style: bold;
+    font-size: 11px;
+    white-space: normal;
+}
+
+/* ─── Snapshot Files ──────────────────────────────────────── */
+.ppe-snapshots-panel {
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 100px;
+}
+
+.ppe-snapshot-actions {
+    flex-direction: row;
+    align-items: center;
+    min-height: 28px;
+    padding: 2px 4px;
+    border-bottom-width: 1px;
+    border-color: rgba(0, 0, 0, 0.45);
+    background-color: rgb(34, 34, 34);
+}
+
+.ppe-snapshot-name-row,
+.ppe-snapshot-buttons-row {
+    flex-direction: row;
+    align-items: center;
+}
+
+.ppe-snapshot-name-field {
+    width: 260px;
+    margin-right: 6px;
+}
+
+.ppe-snapshot-name-field > .unity-base-field__label {
+    min-width: 42px;
+    width: 42px;
+}
+
+.ppe-snapshots-list-container {
+    flex-grow: 1;
+    min-height: 100px;
+}
+
+.ppe-snapshots-list {
+    flex-grow: 1;
+    min-height: 100px;
+    background-color: rgb(30, 30, 30);
+    color: rgb(220, 220, 220);
+}
+
+.ppe-list .unity-list-view__item,
+.ppe-list .unity-collection-view__item,
+.ppe-snapshots-list .unity-list-view__item,
+.ppe-snapshots-list .unity-collection-view__item {
+    background-color: rgb(30, 30, 30);
+    color: rgb(220, 220, 220);
+}
+
+.ppe-list .unity-list-view__item--selected,
+.ppe-list .unity-collection-view__item--selected,
+.ppe-snapshots-list .unity-list-view__item--selected,
+.ppe-snapshots-list .unity-collection-view__item--selected {
+    background-color: rgb(48, 86, 142);
+    color: rgb(245, 245, 245);
+}
+
+.ppe-list .unity-list-view__item:hover,
+.ppe-list .unity-collection-view__item:hover,
+.ppe-snapshots-list .unity-list-view__item:hover,
+.ppe-snapshots-list .unity-collection-view__item:hover {
+    background-color: rgb(42, 42, 42);
+}
+
+.ppe-list .unity-list-view__item--selected:hover,
+.ppe-list .unity-collection-view__item--selected:hover,
+.ppe-snapshots-list .unity-list-view__item--selected:hover,
+.ppe-snapshots-list .unity-collection-view__item--selected:hover {
+    background-color: rgb(54, 98, 160);
+    color: rgb(245, 245, 245);
+}
+
+.ppe-snapshot-cell {
+    flex-direction: row;
+    align-items: center;
+    padding: 1px 4px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ppe-snapshot-label,
+.ppe-snapshot-field {
+    flex-grow: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ppe-snapshot-field {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    height: 100%;
+}
+
+.ppe-snapshot-field > .unity-base-field__label {
+    display: none;
+    min-width: 0;
+    width: 0;
+}
+
+.ppe-snapshot-field .unity-base-text-field__input,
+.ppe-snapshot-field .unity-text-field__input {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    padding: 0 2px;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    color: rgb(220, 220, 220);
+}
+
+.ppe-snapshot-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ppe-snapshot-count,
+.ppe-snapshot-count .unity-base-text-field__input,
+.ppe-snapshot-count .unity-text-field__input {
+    -unity-text-align: middle-left;
+}
+
+.ppe-snapshot-size,
+.ppe-snapshot-size .unity-base-text-field__input,
+.ppe-snapshot-size .unity-text-field__input {
+    -unity-text-align: middle-left;
+}
+
+.ppe-snapshot-created,
+.ppe-snapshot-created .unity-base-text-field__input,
+.ppe-snapshot-created .unity-text-field__input {
+    -unity-text-align: middle-left;
+}
+
+.ppe-snapshot-action-cell {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1px 2px;
+}
+
+.ppe-snapshot-action {
+    width: 54px;
+    min-width: 54px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 0 4px;
+    background-color: rgb(58, 58, 58);
+    border-color: rgba(170, 170, 170, 0.32);
+    color: rgb(226, 226, 226);
+}
+
+.ppe-snapshot-action:hover {
+    background-color: rgb(68, 68, 68);
+    border-color: rgba(190, 190, 190, 0.45);
+}
+
+.ppe-snapshot-delete {
+    color: rgb(220, 70, 70);
+}
+
+.ppe-snapshot-empty {
+    padding: 8px;
+    color: rgba(210, 210, 210, 0.75);
+    white-space: normal;
+}
+
+/* ─── List Container ──────────────────────────────────────── */
+.ppe-list-container {
+    flex-grow: 1;
+}
+
+/* ─── List View ───────────────────────────────────────────── */
+.ppe-list {
+    flex-grow: 1;
+    min-height: 100px;
+    background-color: rgb(30, 30, 30);
+    color: rgb(220, 220, 220);
+}
+
+.ppe-list .unity-multi-column-header,
+.ppe-list .unity-multi-column-header__column,
+.ppe-list .unity-multi-column-list-view__header,
+.ppe-snapshots-list .unity-multi-column-header,
+.ppe-snapshots-list .unity-multi-column-header__column,
+.ppe-snapshots-list .unity-multi-column-list-view__header {
+    background-color: rgb(45, 45, 45);
+    color: rgb(220, 220, 220);
+    border-color: rgba(0, 0, 0, 0.45);
+}
+
+.ppe-list .unity-column,
+.ppe-list .unity-column__title,
+.ppe-snapshots-list .unity-column,
+.ppe-snapshots-list .unity-column__title {
+    color: rgb(220, 220, 220);
+}
+
+/* ─── Cells (shared container per column-cell) ────────────── */
+.ppe-cell {
+    flex-direction: row;
+    align-items: stretch;
+    padding: 1px 4px;
+    overflow: hidden;
+    height: 100%;
+    color: rgb(220, 220, 220);
+}
+
+/* Base field (TextField, DropdownField) inside a cell */
+.ppe-cell-field {
+    flex-grow: 1;
+    align-self: stretch;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    height: 100%;
+    min-height: 0;
+}
+
+/* Hide the auto-generated label of BaseField derivatives */
+.ppe-cell-field > .unity-base-field__label {
+    display: none;
+    min-width: 0;
+    width: 0;
+}
+
+/* Make the inner input fill height and stay transparent/borderless (default) */
+.ppe-cell-field .unity-base-text-field__input,
+.ppe-cell-field .unity-enum-field__input,
+.ppe-cell-field .unity-dropdown-field__input,
+.ppe-cell-field .unity-base-popup-field__input,
+.ppe-cell-field .unity-popup-field__input {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    padding: 0 2px;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    align-self: stretch;
+}
+
+.ppe-cell-field .unity-base-field__input {
+    min-height: 0;
+    height: 100%;
+}
+
+.ppe-cell-field--type .unity-dropdown-field__input,
+.ppe-cell-field--type .unity-base-popup-field__input,
+.ppe-cell-field--type .unity-popup-field__input {
+    min-width: 0;
+    padding-left: 4px;
+    padding-right: 2px;
+}
+
+.ppe-cell-field--type .unity-base-popup-field__text,
+.ppe-cell-field--type .unity-popup-field__text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    -unity-text-align: middle-left;
+}
+
+.ppe-cell-field--type .unity-base-popup-field__arrow,
+.ppe-cell-field--type .unity-popup-field__arrow {
+    width: 12px;
+    min-width: 12px;
+    margin-left: 2px;
+}
+
+/* Read-only key field: slightly muted */
+.ppe-field--readonly .unity-base-text-field__input {
+    opacity: 0.6;
+}
+
+/* ─── Row States ──────────────────────────────────────────── */
+/* Odd rows: subtle darker stripe to improve row readability   */
+.ppe-row--odd {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* New row  →  green tint */
+.ppe-row--new {
+    background-color: rgba(30, 160, 30, 0.20);
+}
+
+/* Deleted row  →  red tint + slight fade */
+.ppe-row--deleted {
+    background-color: rgba(200, 30, 30, 0.20);
+}
+.ppe-row--deleted .ppe-cell-field {
+    opacity: 0.45;
+}
+
+/* Edited row  →  yellow tint */
+.ppe-row--edited {
+    background-color: rgba(255, 199, 1, 0.47);
+}
+
+/* Duplicate key row  →  orange tint (overrides new/edited) */
+.ppe-row--duplicate {
+    background-color: rgba(210, 100, 0, 0.24);
+}
+
+/* ─── Validation ──────────────────────────────────────────── */
+/* Red border on the inner input when value is invalid */
+.ppe-field--invalid .unity-base-text-field__input {
+    border-color: rgb(220, 50, 50);
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+/* ─── Visible value field ─────────────────────────────────── */
+/* The value column's TextField gets an explicit visible box    */
+/* so users can clearly see and edit the entry.                 */
+.ppe-cell-field--value .unity-base-text-field__input {
+    background-color: rgba(0, 0, 0, 0.07);
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.28);
+    border-radius: 2px;
+    padding: 0 5px;
+    min-width: 40px;
+}
+.ppe-cell-field--value .unity-base-text-field__input:focus {
+    background-color: rgba(255, 255, 255, 0.10);
+    border-color: rgba(90, 150, 255, 0.70);
+}
+/* placeholder dimmed */
+.ppe-cell-field--value .unity-base-text-field__input > .unity-base-text-field__input--placeholder {
+    opacity: 0.45;
+}
+
+/* Warning icon shown next to invalid value field */
+.ppe-error-icon {
+    color: rgb(220, 50, 50);
+    font-size: 12px;
+    -unity-font-style: bold;
+    width: 14px;
+    flex-shrink: 0;
+    margin-left: 2px;
+    align-self: center;  /* stay vertically centered in stretched cell */
+}
+
+/* Duplicate-key warning icon in the Key column */
+.ppe-dup-icon {
+    color: rgb(200, 90, 0);
+    font-size: 12px;
+    -unity-font-style: bold;
+    width: 14px;
+    flex-shrink: 0;
+    margin-left: 2px;
+    align-self: center;  /* stay vertically centered in stretched cell */
+}
+
+/* Value cell needs room for the error icon */
+.ppe-cell--value {
+    flex-direction: row;
+    align-items: stretch;
+}
+.ppe-cell--value .ppe-cell-field {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+/* ─── Actions Column ──────────────────────────────────────── */
+/* Actions cell keeps children centred (button must not stretch) */
+.ppe-cell--select,
+.ppe-cell--favorite,
+.ppe-cell--edit,
+.ppe-cell--action {
+    justify-content: center;
+    align-items: center;
+    padding: 1px 3px;
+}
+
+.ppe-icon-btn,
+.ppe-delete-btn {
+    width: 22px;
+    height: 18px;
+    padding: 0;
+    font-size: 11px;
+    -unity-font-style: bold;
+    border-radius: 3px;
+    border-width: 1px;
+    background-color: rgb(58, 58, 58);
+    border-color: rgba(170, 170, 170, 0.32);
+    color: rgb(226, 226, 226);
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.ppe-fav-btn {
+    color: rgb(210, 150, 20);
+}
+
+.ppe-edit-btn {
+    color: rgb(80, 145, 220);
+}
+
+.ppe-restore-btn {
+    margin-right: 0;
+}
+
+.ppe-delete-btn:hover {
+    background-color: rgba(200, 50, 50, 0.30);
+    border-color: rgba(200, 50, 50, 0.60);
+}
+
+.ppe-fav-btn:hover {
+    background-color: rgba(210, 150, 20, 0.20);
+    border-color: rgba(210, 150, 20, 0.48);
+}
+
+.ppe-edit-btn:hover {
+    background-color: rgba(80, 145, 220, 0.20);
+    border-color: rgba(80, 145, 220, 0.48);
+}
+
+.ppe-restore-btn:hover {
+    background-color: rgba(40, 160, 40, 0.22);
+    border-color: rgba(40, 160, 40, 0.55);
+}
+
+/* Restore button (when row is marked for delete) */
+.ppe-row--deleted .ppe-delete-btn {
+    background-color: rgba(40, 160, 40, 0.20);
+    border-color: rgba(40, 160, 40, 0.50);
+}
+.ppe-row--deleted .ppe-delete-btn:hover {
+    background-color: rgba(40, 160, 40, 0.40);
+}
+
+.ppe-value-editor-field {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: 0;
+    align-self: stretch;
+}
+
+.ppe-value-editor-field > .unity-base-field__label {
+    display: none;
+}
+
+.ppe-value-editor-field .unity-base-text-field__input,
+.ppe-value-editor-field .unity-text-field__input {
+    flex-grow: 1;
+    min-height: 0;
+    height: 100%;
+    white-space: normal;
+}
+
+/* ─── Runtime dialogs ────────────────────────────────────── */
+.ppe-dialog-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 18px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.58);
+}
+
+.ppe-dialog {
+    width: 520px;
+    max-width: 100%;
+    max-height: 92%;
+    padding: 14px;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: rgba(210, 210, 210, 0.28);
+    background-color: rgb(36, 36, 36);
+}
+
+.ppe-dialog-title {
+    font-size: 16px;
+    -unity-font-style: bold;
+    color: rgb(245, 245, 245);
+    margin-bottom: 8px;
+    white-space: normal;
+}
+
+.ppe-dialog-message {
+    color: rgb(220, 220, 220);
+    margin-bottom: 12px;
+    white-space: normal;
+}
+
+.ppe-dialog-body {
+    flex-grow: 1;
+    min-height: 0;
+    margin-bottom: 12px;
+}
+
+.ppe-dialog-field {
+    flex-grow: 1;
+    min-height: 42px;
+}
+
+.ppe-dialog-field > .unity-base-field__label {
+    min-width: 68px;
+    color: rgb(220, 220, 220);
+}
+
+.ppe-dialog-field .unity-base-text-field__input {
+    min-height: 38px;
+    color: rgb(230, 230, 230);
+    background-color: rgb(42, 42, 42);
+    border-color: rgba(170, 170, 170, 0.35);
+}
+
+.ppe-dialog-error {
+    color: rgb(235, 90, 90);
+    white-space: normal;
+    margin-top: 6px;
+}
+
+.ppe-dialog-scroll {
+    max-height: 260px;
+    min-height: 80px;
+    margin-bottom: 6px;
+}
+
+.ppe-phone-portrait .ppe-move-group-list {
+    max-height: 160px;
+    min-height: 0;
+    margin-bottom: 0;
+}
+
+.ppe-phone-portrait .ppe-move-group-button {
+    width: 100%;
+    min-height: 34px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    -unity-text-align: middle-left;
+}
+
+.ppe-dialog-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ppe-dialog-button {
+    min-width: 92px;
+    min-height: 34px;
+    margin-left: 6px;
+    margin-top: 6px;
+    padding: 0 12px;
+    background-color: rgb(58, 58, 58);
+    border-color: rgba(170, 170, 170, 0.32);
+    color: rgb(226, 226, 226);
+}
+
+.ppe-dialog-button:hover {
+    background-color: rgb(68, 68, 68);
+    border-color: rgba(190, 190, 190, 0.45);
+}
+
+.ppe-dialog-button--danger {
+    color: rgb(235, 90, 90);
+    -unity-font-style: bold;
+}
+
+/* ─── Phone portrait layout ───────────────────────────────── */
+.ppe-phone-portrait {
+    min-width: 0;
+    background-color: rgb(14, 14, 14);
+}
+
+.ppe-phone-portrait .ppe-toolbar,
+.ppe-phone-portrait .ppe-tabs,
+.ppe-phone-portrait .ppe-snapshot-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    min-height: 0;
+    padding: 4px;
+}
+
+.ppe-phone-portrait .ppe-tabs-scroll {
+    min-height: 72px;
+    max-height: 72px;
+    padding: 8px 8px 7px 8px;
+    border-bottom-width: 1px;
+    border-color: rgba(255, 255, 255, 0.07);
+    background-color: rgb(28, 28, 28);
+}
+
+.ppe-phone-portrait .ppe-mobile-quick-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    margin: 4px 4px 0 4px;
+    padding: 6px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.08);
+    background-color: rgb(24, 24, 24);
+}
+
+.ppe-phone-portrait .ppe-tabs-scroll .unity-scroller--horizontal {
+    height: 3px;
+    min-height: 3px;
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+.ppe-phone-portrait .ppe-tabs-scroll .unity-scroller--horizontal .unity-scroller__slider {
+    height: 3px;
+    min-height: 3px;
+    border-radius: 2px;
+    background-color: rgba(210, 210, 210, 0.70);
+}
+
+.ppe-phone-portrait .ppe-tabs-scroll .unity-scroller--horizontal .unity-scroller__low-button,
+.ppe-phone-portrait .ppe-tabs-scroll .unity-scroller--horizontal .unity-scroller__high-button {
+    display: none;
+    width: 0;
+    min-width: 0;
+    height: 0;
+}
+
+.ppe-phone-portrait .ppe-toolbar-spacer {
+    display: none;
+}
+
+.ppe-phone-portrait .ppe-toolbar-btn,
+.ppe-phone-portrait .ppe-tab,
+.ppe-phone-portrait .ppe-tab-close-btn,
+.ppe-phone-portrait .ppe-icon-btn,
+.ppe-phone-portrait .ppe-delete-btn,
+.ppe-phone-portrait .ppe-snapshot-action {
+    min-height: 48px;
+    font-size: 15px;
+    border-radius: 7px;
+}
+
+.ppe-phone-portrait .ppe-toolbar-btn {
+    margin: 3px;
+    padding: 0 12px;
+    min-width: 0;
+    width: 47%;
+    border-width: 1px;
+    -unity-text-align: middle-center;
+}
+
+.ppe-phone-portrait .ppe-mobile-quick-actions .ppe-toolbar-btn {
+    min-height: 42px;
+    margin: 0 3px;
+    padding: 0 8px;
+    font-size: 14px;
+    width: auto;
+}
+
+.ppe-phone-portrait .ppe-selected-count {
+    display: none;
+    min-height: 48px;
+    min-width: 0;
+    width: 48.5%;
+    padding: 0 14px;
+    margin: 4px;
+    font-size: 15px;
+    -unity-text-align: middle-left;
+    border-radius: 7px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.12);
+    background-color: rgb(28, 28, 28);
+    color: rgb(232, 232, 232);
+}
+
+.ppe-phone-portrait .ppe-toolbar {
+    margin: 0 4px;
+    padding: 8px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.08);
+    background-color: rgb(24, 24, 24);
+}
+
+.ppe-phone-portrait .ppe-toolbar-fold-toggle {
+    display: flex;
+    width: 100%;
+    background-color: rgb(42, 46, 54);
+    border-color: rgba(125, 155, 210, 0.40);
+}
+
+.ppe-phone-portrait .ppe-status-row {
+    margin: 4px 4px 0 4px;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.ppe-phone-portrait .ppe-mobile-new-entry {
+    display: flex;
+    min-width: 0;
+    min-height: 42px;
+    margin: 0 3px;
+    padding: 0 8px;
+    font-size: 14px;
+    border-radius: 7px;
+}
+
+.ppe-phone-portrait .ppe-tabs {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: auto;
+    min-height: 0;
+    padding: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.ppe-phone-portrait .ppe-tab {
+    flex-grow: 0;
+    min-width: 150px;
+    min-height: 54px;
+    margin: 0 4px;
+    padding: 0 16px;
+    border-radius: 7px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.20);
+    background-color: rgb(46, 46, 46);
+    font-size: 16px;
+    -unity-text-align: middle-center;
+}
+
+.ppe-phone-portrait .ppe-tab--active {
+    background-color: rgb(45, 82, 132);
+    border-color: rgba(105, 165, 255, 0.72);
+}
+
+.ppe-phone-portrait .ppe-tab-with-close {
+    flex-grow: 0;
+    min-width: 190px;
+    min-height: 54px;
+    margin: 0 4px;
+}
+
+.ppe-phone-portrait .ppe-tab-with-close .ppe-tab {
+    margin: 0;
+    min-width: 142px;
+}
+
+.ppe-phone-portrait .ppe-tab-close-btn {
+    width: 42px;
+    min-width: 42px;
+    min-height: 54px;
+    margin-left: 4px;
+    font-size: 16px;
+}
+
+.ppe-phone-portrait .ppe-tabs > .ppe-toolbar-btn {
+    min-width: 58px;
+    min-height: 54px;
+    margin: 0 4px;
+    width: auto;
+    font-size: 22px;
+}
+
+.ppe-phone-portrait .ppe-status {
+    min-height: 34px;
+    padding: 6px 10px;
+    font-size: 13px;
+    white-space: normal;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.08);
+    background-color: rgb(18, 18, 18);
+    color: rgb(224, 224, 224);
+}
+
+.ppe-phone-portrait .ppe-error-banner {
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.ppe-phone-portrait .ppe-filter-row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    margin: 4px 4px 0 4px;
+    padding: 12px 10px;
+    min-height: 0;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.08);
+    background-color: rgb(22, 22, 22);
+}
+
+.ppe-phone-portrait .ppe-filter-col-select,
+.ppe-phone-portrait .ppe-filter-col-favorite,
+.ppe-phone-portrait .ppe-filter-col-edit,
+.ppe-phone-portrait .ppe-filter-col-action {
+    display: none;
+}
+
+.ppe-phone-portrait .ppe-filter-cell,
+.ppe-phone-portrait .ppe-filter-col-key,
+.ppe-phone-portrait .ppe-filter-col-type,
+.ppe-phone-portrait .ppe-filter-col-value {
+    width: auto;
+    min-width: 0;
+    min-height: 38px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-right-width: 0;
+    padding: 2px 4px;
+}
+
+.ppe-phone-portrait .ppe-filter-field {
+    min-height: 48px;
+}
+
+.ppe-phone-portrait .ppe-filter-field .unity-base-text-field__input,
+.ppe-phone-portrait .ppe-filter-field .unity-dropdown-field__input {
+    min-height: 46px;
+    padding: 0 12px;
+    font-size: 15px;
+    border-radius: 7px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.18);
+    background-color: rgb(32, 32, 32);
+}
+
+.ppe-phone-portrait .ppe-row-resize-handle {
+    display: none;
+}
+
+.ppe-phone-portrait .ppe-list-container {
+    margin: 0 4px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    background-color: rgb(18, 18, 18);
+}
+
+.ppe-phone-portrait .ppe-list {
+    background-color: rgb(18, 18, 18);
+}
+
+.ppe-phone-portrait .ppe-list .unity-multi-column-header,
+.ppe-phone-portrait .ppe-list .unity-multi-column-header__column,
+.ppe-phone-portrait .ppe-list .unity-multi-column-list-view__header,
+.ppe-phone-portrait .ppe-snapshots-list .unity-multi-column-header,
+.ppe-phone-portrait .ppe-snapshots-list .unity-multi-column-header__column,
+.ppe-phone-portrait .ppe-snapshots-list .unity-multi-column-list-view__header {
+    min-height: 48px;
+    background-color: rgb(34, 34, 34);
+    border-color: rgba(255, 255, 255, 0.10);
+    color: rgb(235, 235, 235);
+}
+
+.ppe-phone-portrait .ppe-list .unity-list-view__item,
+.ppe-phone-portrait .ppe-list .unity-collection-view__item,
+.ppe-phone-portrait .ppe-snapshots-list .unity-list-view__item,
+.ppe-phone-portrait .ppe-snapshots-list .unity-collection-view__item {
+    background-color: rgb(20, 20, 20);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.ppe-phone-portrait .ppe-row--selected {
+    background-color: rgb(32, 58, 92);
+    border-left-width: 3px;
+    border-color: rgba(95, 165, 255, 0.95);
+}
+
+.ppe-phone-portrait .ppe-row--selected .ppe-cell-field,
+.ppe-phone-portrait .ppe-row--selected .ppe-cell-field .unity-base-field__input,
+.ppe-phone-portrait .ppe-row--selected .ppe-cell-field .unity-base-text-field__input,
+.ppe-phone-portrait .ppe-row--selected .ppe-cell-field .unity-enum-field__input,
+.ppe-phone-portrait .ppe-row--selected .ppe-cell-field .unity-dropdown-field__input,
+.ppe-phone-portrait .ppe-row--selected .ppe-cell-field .unity-base-popup-field__input,
+.ppe-phone-portrait .ppe-row--selected .ppe-cell-field .unity-popup-field__input {
+    background-color: rgb(26, 50, 82);
+    border-color: rgba(110, 175, 255, 0.75);
+}
+
+.ppe-phone-portrait .ppe-row--selected .ppe-icon-btn,
+.ppe-phone-portrait .ppe-row--selected .ppe-delete-btn {
+    background-color: rgb(40, 66, 104);
+    border-color: rgba(120, 185, 255, 0.75);
+}
+
+.ppe-phone-portrait .ppe-cell {
+    padding: 5px 6px;
+    color: rgb(226, 226, 226);
+}
+
+.ppe-phone-portrait .ppe-cell-field,
+.ppe-phone-portrait .ppe-cell-field .unity-base-field__input,
+.ppe-phone-portrait .ppe-cell-field .unity-base-text-field__input,
+.ppe-phone-portrait .ppe-cell-field .unity-enum-field__input,
+.ppe-phone-portrait .ppe-cell-field .unity-dropdown-field__input,
+.ppe-phone-portrait .ppe-cell-field .unity-base-popup-field__input,
+.ppe-phone-portrait .ppe-cell-field .unity-popup-field__input {
+    min-height: 40px;
+    font-size: 15px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.12);
+    background-color: rgb(24, 24, 24);
+}
+
+.ppe-phone-portrait .ppe-cell-field .unity-base-text-field__input,
+.ppe-phone-portrait .ppe-cell-field .unity-dropdown-field__input,
+.ppe-phone-portrait .ppe-cell-field .unity-base-popup-field__input,
+.ppe-phone-portrait .ppe-cell-field .unity-popup-field__input {
+    padding: 0 8px;
+}
+
+.ppe-phone-portrait .ppe-cell-field--type .unity-dropdown-field__input,
+.ppe-phone-portrait .ppe-cell-field--type .unity-base-popup-field__input,
+.ppe-phone-portrait .ppe-cell-field--type .unity-popup-field__input {
+    padding-left: 6px;
+    padding-right: 2px;
+}
+
+.ppe-phone-portrait .ppe-cell-field--type .unity-base-popup-field__arrow,
+.ppe-phone-portrait .ppe-cell-field--type .unity-popup-field__arrow {
+    width: 10px;
+    min-width: 10px;
+}
+
+.ppe-phone-portrait .ppe-cell-field--value .unity-base-text-field__input {
+    padding: 0 9px;
+}
+
+.ppe-phone-portrait .ppe-cell--select,
+.ppe-phone-portrait .ppe-cell--favorite,
+.ppe-phone-portrait .ppe-cell--edit,
+.ppe-phone-portrait .ppe-cell--action {
+    padding: 3px;
+}
+
+.ppe-phone-portrait .ppe-icon-btn,
+.ppe-phone-portrait .ppe-delete-btn {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+    font-size: 18px;
+    border-radius: 6px;
+    border-color: rgba(255, 255, 255, 0.18);
+    background-color: rgb(44, 44, 44);
+}
+
+.ppe-phone-portrait .ppe-error-icon,
+.ppe-phone-portrait .ppe-dup-icon {
+    width: 22px;
+    font-size: 16px;
+}
+
+.ppe-phone-portrait .ppe-snapshot-name-field {
+    flex-grow: 1;
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    min-height: 36px;
+}
+
+.ppe-phone-portrait .ppe-snapshot-actions {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    margin: 4px;
+    padding: 6px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.08);
+    background-color: rgb(24, 24, 24);
+}
+
+.ppe-phone-portrait .ppe-snapshot-name-row,
+.ppe-phone-portrait .ppe-snapshot-buttons-row {
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.ppe-phone-portrait .ppe-snapshot-buttons-row {
+    margin-top: 6px;
+}
+
+.ppe-phone-portrait .ppe-snapshot-buttons-row .ppe-toolbar-btn {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 50%;
+    min-width: 0;
+}
+
+.ppe-phone-portrait .ppe-snapshot-name-field > .unity-base-field__label {
+    min-width: 48px;
+    width: 48px;
+    font-size: 13px;
+}
+
+.ppe-phone-portrait .ppe-snapshot-name-field .unity-base-text-field__input {
+    min-height: 32px;
+    padding: 0 8px;
+    font-size: 13px;
+}
+
+.ppe-phone-portrait .ppe-snapshot-cell,
+.ppe-phone-portrait .ppe-snapshot-action-cell {
+    padding: 4px 5px;
+}
+
+.ppe-phone-portrait .ppe-snapshot-label,
+.ppe-phone-portrait .ppe-snapshot-field,
+.ppe-phone-portrait .ppe-snapshot-field .unity-base-text-field__input,
+.ppe-phone-portrait .ppe-snapshot-field .unity-text-field__input {
+    font-size: 13px;
+}
+
+.ppe-phone-portrait .ppe-snapshot-action {
+    width: 60px;
+    min-width: 60px;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding: 0 5px;
+}
+
+.ppe-phone-portrait .ppe-dialog-overlay {
+    padding: 8px;
+    align-items: stretch;
+}
+
+.ppe-phone-portrait .ppe-dialog {
+    width: auto;
+    max-height: 96%;
+    padding: 12px;
+}
+
+.ppe-phone-portrait .ppe-dialog-title {
+    font-size: 17px;
+}
+
+.ppe-phone-portrait .ppe-dialog-message,
+.ppe-phone-portrait .ppe-dialog-field,
+.ppe-phone-portrait .ppe-dialog-field .unity-base-text-field__input {
+    font-size: 14px;
+}
+
+.ppe-phone-portrait .ppe-dialog-button {
+    min-height: 36px;
+    min-width: 96px;
+    font-size: 13px;
+}
+
+/* ─── Narrow phone layout ────────────────────────────────── */
+.ppe-phone-narrow {
+    min-width: 0;
+}
+
+.ppe-phone-narrow .ppe-toolbar,
+.ppe-phone-narrow .ppe-tabs,
+.ppe-phone-narrow .ppe-snapshot-actions,
+.ppe-phone-narrow .ppe-filter-row {
+    padding: 2px;
+}
+
+.ppe-phone-narrow .ppe-toolbar-btn,
+.ppe-phone-narrow .ppe-tab,
+.ppe-phone-narrow .ppe-tab-close-btn,
+.ppe-phone-narrow .ppe-icon-btn,
+.ppe-phone-narrow .ppe-delete-btn,
+.ppe-phone-narrow .ppe-snapshot-action {
+    min-height: 42px;
+    font-size: 13px;
+}
+
+.ppe-phone-narrow .ppe-toolbar-btn {
+    min-width: 0;
+    width: 47%;
+    padding: 0 8px;
+    margin: 3px;
+}
+
+.ppe-phone-narrow .ppe-selected-count {
+    min-width: 0;
+    width: 48%;
+    min-height: 42px;
+    font-size: 13px;
+    padding: 0 8px;
+}
+
+.ppe-phone-narrow .ppe-tab {
+    min-width: 132px;
+    min-height: 48px;
+    padding: 0 10px;
+}
+
+.ppe-phone-narrow .ppe-tabs-scroll {
+    min-height: 66px;
+    max-height: 66px;
+}
+
+.ppe-phone-narrow .ppe-tab-close-btn {
+    width: 38px;
+    min-width: 38px;
+}
+
+.ppe-phone-narrow .ppe-status {
+    min-height: 26px;
+    padding: 4px 6px;
+    font-size: 11px;
+}
+
+.ppe-phone-narrow .ppe-filter-cell,
+.ppe-phone-narrow .ppe-filter-col-key,
+.ppe-phone-narrow .ppe-filter-col-type,
+.ppe-phone-narrow .ppe-filter-col-value {
+    min-height: 34px;
+    padding: 2px 0;
+}
+
+.ppe-phone-narrow .ppe-filter-field,
+.ppe-phone-narrow .ppe-filter-field .unity-base-text-field__input,
+.ppe-phone-narrow .ppe-filter-field .unity-dropdown-field__input {
+    min-height: 40px;
+    font-size: 13px;
+}
+
+.ppe-phone-narrow .ppe-cell {
+    padding: 3px 4px;
+}
+
+.ppe-phone-narrow .ppe-cell-field,
+.ppe-phone-narrow .ppe-cell-field .unity-base-field__input,
+.ppe-phone-narrow .ppe-cell-field .unity-base-text-field__input,
+.ppe-phone-narrow .ppe-cell-field .unity-enum-field__input,
+.ppe-phone-narrow .ppe-cell-field .unity-dropdown-field__input,
+.ppe-phone-narrow .ppe-cell-field .unity-base-popup-field__input,
+.ppe-phone-narrow .ppe-cell-field .unity-popup-field__input {
+    min-height: 30px;
+    font-size: 12px;
+}
+
+.ppe-phone-narrow .ppe-icon-btn,
+.ppe-phone-narrow .ppe-delete-btn {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+    font-size: 16px;
+}
+
+.ppe-phone-narrow .ppe-snapshot-name-field {
+    min-width: 0;
+    width: auto;
+}
+
+/* ─── Column header sort indicator (handled by Unity) ─────── */
+/* No overrides needed; MultiColumnListView draws its own arrows */

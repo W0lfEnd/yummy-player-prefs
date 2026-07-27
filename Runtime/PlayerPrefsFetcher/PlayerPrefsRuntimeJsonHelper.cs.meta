@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 14b934890dcd64f18b5022fbb8b9df1f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 304550
+  packageName: PlayerPrefs Runtime Tool - Viewer and Editor
+  packageVersion: 3.0
+  assetPath: Assets/DmytroUdovychenko/PlayerPrefsRuntimeTool/Scripts/PlayerPrefsFetcher/PlayerPrefsRuntimeJsonHelper.cs
+  uploadId: 843072

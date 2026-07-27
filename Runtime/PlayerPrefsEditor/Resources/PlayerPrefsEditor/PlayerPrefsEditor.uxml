@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+
+    <!-- ── Tabs ──────────────────────────────────────────────────────────── -->
+    <ui:ScrollView name="tabs-scroll" class="ppe-tabs-scroll" mode="Horizontal">
+        <ui:VisualElement name="tabs-toolbar" class="ppe-tabs">
+            <ui:Toggle name="tab-snapshots" class="ppe-tab" label="Snapshots" value="false" />
+            <ui:Toggle name="tab-keys"    class="ppe-tab" label="Keys" value="true" />
+            <ui:Button name="btn-add-group" class="ppe-toolbar-btn ppe-toolbar-btn--group" text="+ Group" />
+            <ui:VisualElement class="ppe-toolbar-spacer" />
+        </ui:VisualElement>
+    </ui:ScrollView>
+
+    <!-- ── Mobile quick actions ──────────────────────────────────────────── -->
+    <ui:VisualElement name="mobile-quick-actions" class="ppe-mobile-quick-actions">
+        <ui:Button name="btn-add-new-mobile" class="ppe-toolbar-btn ppe-toolbar-btn--entry ppe-mobile-new-entry" text="+ New Entry" />
+        <ui:Button name="btn-save-mobile" class="ppe-toolbar-btn ppe-toolbar-btn--data" text="Save" />
+        <ui:Button name="btn-refresh-mobile" class="ppe-toolbar-btn ppe-toolbar-btn--data" text="Refresh" />
+    </ui:VisualElement>
+
+    <!-- ── Toolbar ───────────────────────────────────────────────────────── -->
+    <ui:VisualElement class="ppe-toolbar">
+        <ui:Button name="btn-actions-fold" class="ppe-toolbar-btn ppe-toolbar-fold-toggle" text="Actions +" />
+        <ui:Button name="btn-add-new"    class="ppe-toolbar-btn ppe-toolbar-btn--entry" text="+ New Entry" />
+        <ui:Label name="selected-count-label" class="ppe-selected-count" text="Selected: 0" />
+        <ui:Button name="btn-restore-selected" class="ppe-toolbar-btn ppe-toolbar-btn--selection" text="Restore Selected" />
+        <ui:Button name="btn-move-selected" class="ppe-toolbar-btn ppe-toolbar-btn--selection" text="Move To Group" />
+        <ui:Button name="btn-delete-selected" class="ppe-toolbar-btn ppe-toolbar-btn--danger" text="X Delete Selected" />
+        <ui:VisualElement class="ppe-toolbar-spacer" />
+        <ui:Button name="btn-delete-all" class="ppe-toolbar-btn ppe-toolbar-btn--danger ppe-danger-btn" text="X Delete All" />
+        <ui:Button name="btn-save"       class="ppe-toolbar-btn ppe-toolbar-btn--data" text="Save" />
+        <ui:Button name="btn-refresh"    class="ppe-toolbar-btn ppe-toolbar-btn--data" text="Refresh" />
+        <ui:Button name="btn-export"     class="ppe-toolbar-btn ppe-toolbar-btn--io" text="Export JSON" />
+        <ui:Button name="btn-import"     class="ppe-toolbar-btn ppe-toolbar-btn--io" text="Import JSON" />
+    </ui:VisualElement>
+
+    <!-- ── Status bar ────────────────────────────────────────────────────── -->
+    <ui:VisualElement name="status-row" class="ppe-status-row">
+        <ui:Label name="status-label" class="ppe-status" />
+    </ui:VisualElement>
+
+    <!-- ── Error banner (hidden by default via ppe-hidden; shown on duplicates) -->
+    <ui:Label name="error-banner" class="ppe-error-banner ppe-hidden" />
+
+    <!-- ── Snapshot files ────────────────────────────────────────────────── -->
+    <ui:VisualElement name="snapshots-panel" class="ppe-snapshots-panel ppe-hidden">
+        <ui:VisualElement class="ppe-snapshot-actions">
+            <ui:VisualElement class="ppe-snapshot-name-row">
+                <ui:TextField name="snapshot-name"
+                              class="ppe-snapshot-name-field"
+                              label="Name"
+                              is-delayed="false" />
+            </ui:VisualElement>
+            <ui:VisualElement class="ppe-snapshot-buttons-row">
+                <ui:Button name="btn-save-snapshot" class="ppe-toolbar-btn ppe-toolbar-btn--data" text="Save Snapshot" />
+                <ui:Button name="btn-refresh-snapshots" class="ppe-toolbar-btn ppe-toolbar-btn--data" text="Refresh" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="snapshots-list-container" class="ppe-snapshots-list-container" />
+    </ui:VisualElement>
+
+    <!-- ── Per-column filter row ─────────────────────────────────────────── -->
+    <!--
+        Initial widths mirror the MultiColumnListView default column widths:
+          Select (28 px) | Star (28 px) | Key (200 px) | Type (80 px) | Value (flex) | Edit (28 px) | Action (28 px)
+        After the list view is rendered, C# syncs these widths to the actual
+        column widths so resizing a column also resizes the filter field.
+    -->
+    <ui:VisualElement class="ppe-filter-row">
+        <ui:VisualElement class="ppe-filter-col-select" />
+        <ui:VisualElement class="ppe-filter-col-favorite" />
+        <ui:VisualElement class="ppe-filter-cell ppe-filter-col-key">
+            <ui:TextField name="filter-key"
+                          class="ppe-filter-field"
+                          is-delayed="false"
+                          placeholder-text="Key..." />
+        </ui:VisualElement>
+        <ui:VisualElement class="ppe-filter-cell ppe-filter-col-type">
+            <ui:DropdownField name="filter-type"
+                              class="ppe-filter-field" />
+        </ui:VisualElement>
+        <ui:VisualElement class="ppe-filter-cell ppe-filter-col-value">
+            <ui:TextField name="filter-value"
+                          class="ppe-filter-field"
+                          is-delayed="false"
+                          placeholder-text="Value..." />
+        </ui:VisualElement>
+        <ui:VisualElement class="ppe-filter-col-edit" />
+        <ui:VisualElement class="ppe-filter-col-action" />
+    </ui:VisualElement>
+
+    <!-- ── List view placeholder (MultiColumnListView injected from C#) ─── -->
+    <ui:VisualElement name="row-resize-handle" class="ppe-row-resize-handle" tooltip="Drag to resize rows" />
+    <ui:VisualElement name="list-container" class="ppe-list-container" />
+
+</ui:UXML>

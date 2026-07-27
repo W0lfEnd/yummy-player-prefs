@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d189a011d363d482a97605e9bd2825c7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 304550
+  packageName: PlayerPrefs Runtime Tool - Viewer and Editor
+  packageVersion: 3.0
+  assetPath: Assets/DmytroUdovychenko/PlayerPrefsRuntimeTool/Scripts/PlayerPrefsFetcher/PlayerPrefsRuntimeFetcherMacOS.cs
+  uploadId: 843072

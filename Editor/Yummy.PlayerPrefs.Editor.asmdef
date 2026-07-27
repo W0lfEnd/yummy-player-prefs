@@ -1,0 +1,18 @@
+{
+    "name": "Yummy.PlayerPrefs.Editor",
+    "rootNamespace": "YummyDev.PlayerPrefsTool",
+    "references": [
+        "Yummy.PlayerPrefs"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
