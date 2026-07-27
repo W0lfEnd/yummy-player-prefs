@@ -1,6 +1,11 @@
 Changelog
 =========
 
+[1.0.3] - 2026-07-27
+--------------------
+* **Fixed**
+    * Regenerate all Unity asset GUIDs in package meta files.
+
 [1.0.2] - 2026-07-27
 --------------------
 * **Fixed**
